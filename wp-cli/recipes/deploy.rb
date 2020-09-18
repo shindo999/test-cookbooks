@@ -13,7 +13,7 @@ execute "wp configure" do
   cwd "#{wpdir}"
   user "deploy"
   not_if { File.exists?("#{wpdir}/wp-config.php") }
-  action : run
+  action :run
 end
 
 uri = URI.parse("http://169.254.169.254/latest/meta-data/public-hostname")
