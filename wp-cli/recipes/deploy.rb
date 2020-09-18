@@ -23,10 +23,10 @@ response = http.request(request)
 
 public_hostname = response.body
 
-excute "db create" do
+execute "db create" do
   command "wp db create"
   cwd "#{wpdir}"
-  user "dwploy"
+  user "deploy"
   action :run
   ignoer_failure true
 end
