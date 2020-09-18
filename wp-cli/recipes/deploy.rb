@@ -28,7 +28,7 @@ execute "db create" do
   cwd "#{wpdir}"
   user "deploy"
   action :run
-  ignoer_failure true
+  ignore_failure true
 end
 
 execute "wp deploy" do
